@@ -10,7 +10,6 @@ def run():
     data_frame = extract(path)
     data_frame.to_csv('./Data/raw_data.csv', index = False)
 
-
     data_frame = transform(path2)
     data_frame.to_csv('./Data/population.csv', index = False)
 

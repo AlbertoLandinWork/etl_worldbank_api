@@ -14,7 +14,6 @@ def extract(path: str)-> pd.DataFrame:
     page = 1
     data_frame = pd.DataFrame()
 
-
     """
     Realizo la solicitud y convierto los datos a un objeto DataFrame.
     """ 
@@ -24,6 +23,5 @@ def extract(path: str)-> pd.DataFrame:
         df['country_name'] = response.json()[1][0]['country']['value']
         data_frame = pd.concat([data_frame, df], axis = 0)
         page += 1
-    
     
     return data_frame
